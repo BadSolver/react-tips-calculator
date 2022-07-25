@@ -10,4 +10,9 @@ export const StyledInput = styled.input`
     line-height: 26px;
     text-align: center;
     border: none;
+    
+    @media (max-width: 576px) {
+        padding: 19px 80px;
+        margin-left: 20px;
+    }
 `

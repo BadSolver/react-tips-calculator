@@ -18,3 +18,14 @@ export const FormDescription = styled.p`
     opacity: 57%;
     margin-top: 45px;
 `
+export const Total = styled.h2`
+    text-align: left;
+    font-size: 24px;
+    line-height: 35px;
+    letter-spacing: -0.3px;
+    font-weight: 700;
+    margin-top: 45px;
+    @media (max-width: 576px) {
+        margin-left: 10px;
+    }
+`

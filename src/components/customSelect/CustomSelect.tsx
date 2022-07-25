@@ -1,4 +1,4 @@
-import Select from 'react-select/dist/declarations/src/Select'
+import Select from 'react-select'
 import { IOption } from '../../types'
 
 interface ICustomSelect {
