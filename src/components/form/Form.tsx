@@ -2,6 +2,7 @@ import { useState } from 'react'
 import { IOption } from '../../types'
 import { Button } from '../button/Button'
 import { CustomSelect } from '../customSelect/CustomSelect'
+import { customStyles } from '../customSelect/style'
 import { Input } from '../input/Input'
 import { FormTitle, FormContainer, FormDescription, Total } from './style'
 
@@ -25,7 +26,7 @@ export const Form = () => {
   const [percent, setPercent] = useState(10)
   const [bill, setBill] = useState('')
   const [people, setPeople] = useState('')
-  const [total, setTotal] = useState(0.00)
+  const [total, setTotal] = useState('0.00$')
 
   const handleBill = (value: string): void => {
     setBill(value)
@@ -50,7 +51,7 @@ const handlePercent = (newValue: any): void => {
       <Input placeholder='Enter bill' type='text'/>
       <Input placeholder='Enter  persons' type='text'/>
       <CustomSelect onChange={handlePercent} value={getPercentValue()} options={options}/>
-      <Total>Total: </Total>
+      <Total>Total: {total}</Total>
       <Button/>
     </FormContainer>
   )

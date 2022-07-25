@@ -1,5 +1,6 @@
 import Select from 'react-select'
 import { IOption } from '../../types'
+import { customStyles } from './style';
 
 interface ICustomSelect {
   onChange: (newValue: any) => void;
@@ -9,6 +10,6 @@ interface ICustomSelect {
 
 export const CustomSelect = ({onChange, value, options}: ICustomSelect) => {
   return (
-    <Select onChange={onChange} value={value} options={options}/>
+    <Select onChange={onChange} value={value} options={options} styles={customStyles}/>
   )
 }
