@@ -1,9 +1,13 @@
+import { Form } from "./components/form/Form";
+import { GlobalStyle } from "./GlobalStyles";
+import { Wrapper } from "./style";
 
-function App() {
+export const App = () => {
+
   return (
-    <div className="App">
-    </div>
+    <Wrapper>
+      <GlobalStyle />
+      <Form />
+    </Wrapper>
   );
 }
-
-export default App;

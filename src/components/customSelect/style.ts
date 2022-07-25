@@ -1,1 +1,1 @@
-export const i = 1
+export const CustomStyle = 12

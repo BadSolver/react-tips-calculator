@@ -1,7 +1,14 @@
+import { type } from 'os'
 import React from 'react'
+import { StyledInput } from './style';
 
-export const Input = () => {
+interface IInput {
+  placeholder: string;
+  type: string;
+}
+
+export const Input = ({placeholder, type}: IInput) => {
   return (
-    <div>Input</div>
+    <StyledInput placeholder={placeholder} type={type}/>
   )
 }
