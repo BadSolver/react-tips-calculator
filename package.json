@@ -1,6 +1,7 @@
 {
   "name": "react-tips-calculator",
   "version": "0.1.0",
+  "homepage": "https://badsolver.github.io/react-tips-calculator/",
   "private": true,
   "dependencies": {
     "@testing-library/jest-dom": "^5.16.4",
