@@ -48,8 +48,8 @@ const handlePercent = (newValue: any): void => {
     <FormContainer>
       <FormTitle>Welcome to App</FormTitle>
       <FormDescription>Let’s go calculate your tips</FormDescription>
-      <Input placeholder='Enter bill' type='text'/>
-      <Input placeholder='Enter  persons' type='text'/>
+      <Input placeholder='Enter bill' type='number'/>
+      <Input placeholder='Enter  persons' type='number'/>
       <CustomSelect onChange={handlePercent} value={getPercentValue()} options={options}/>
       <Total>Total: {total}</Total>
       <Button/>

@@ -10,6 +10,11 @@ export const StyledInput = styled.input`
     line-height: 26px;
     text-align: center;
     border: none;
+    ::-webkit-inner-spin-button,
+    ::-webkit-outer-spin-button{
+        -webkit-appearance: none;
+        margin: 0;
+    }
     
     @media (max-width: 576px) {
         padding: 19px 80px;
