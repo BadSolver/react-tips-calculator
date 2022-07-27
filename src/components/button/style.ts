@@ -9,6 +9,7 @@ export const StyledButton = styled.button`
     border: none;
     color: #FFF;
     margin-top: 45px;
+    margin-bottom: 120px;
     cursor: pointer;
         & :disabled,
            &[disabled] 

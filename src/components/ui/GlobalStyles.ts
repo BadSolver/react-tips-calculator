@@ -1,5 +1,7 @@
 import { createGlobalStyle } from "styled-components";
 
+
+
 export const GlobalStyle = createGlobalStyle`
 *{
     margin: 0;
@@ -7,10 +9,11 @@ export const GlobalStyle = createGlobalStyle`
     box-sizing: border-box;
 }
 body {
-        background: #EAF2F2;
+        width: 100%;
+        background: #2ED2C9;
         font-family: 'Source Sans Pro', sans-serif;
         font-weight: 400;
         color: #000;
 }
-`;
+`
 
