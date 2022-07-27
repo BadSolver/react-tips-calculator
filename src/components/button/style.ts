@@ -10,6 +10,12 @@ export const StyledButton = styled.button`
     color: #FFF;
     margin-top: 45px;
     cursor: pointer;
+        & :disabled,
+           &[disabled] 
+        {
+            opacity: 50%;
+            cursor: default;
+        }
 
     @media (max-width: 576px) {
         padding: 13px 100px;

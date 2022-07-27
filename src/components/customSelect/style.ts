@@ -1,7 +1,7 @@
 export const customStyles = {
     control: (styles: any) => ({
         ...styles,
-        marginTop: '20px',
+        marginTop: '30px',
         textAlign: 'center',
         color: '#756C6C',
         borderRadius: '30px',
