@@ -1,16 +1,19 @@
 import styled from "styled-components";
 
 export const FormContainer = styled.div`
-    max-width: 460px;
+    max-width: 453px;
+    @media (max-width: 576px) {
+        max-width: 380px;
+    }
 `
-export const FormTitle = styled.h1`
+export const Title = styled.h1`
     font-weight: 400;
     text-align: center;
     font-size: 40px;
     line-height: 58px;
     margin-top: 203px;
 `
-export const FormDescription = styled.p`
+export const Description = styled.p`
     font-size: 32px;
     line-height: 37.5px;
     text-align: center;

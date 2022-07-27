@@ -3,7 +3,7 @@ import { IOption } from '../../types'
 import { Button } from '../button/Button'
 import { CustomSelect } from '../customSelect/CustomSelect'
 import { Input } from '../input/Input'
-import { FormTitle, FormContainer, FormDescription, Total } from './style'
+import { FormContainer, Total, Title, Description } from './style'
 
 const options: IOption[] = [
 {
@@ -25,7 +25,7 @@ export const Form = () => {
   const [percent, setPercent] = useState(10)
   const [bill, setBill] = useState('')
   const [people, setPeople] = useState('')
-  const [total, setTotal] = useState('0.00$')
+  const [total, setTotal] = useState(0.0)
   const [button, setButton] = useState(true)
 
   const handleBill = (value: string): void => {
@@ -36,10 +36,6 @@ export const Form = () => {
     setPeople(value)
   }
 
-  const handleTotal = (value: string): void => {
-    setTotal(value)
-  }
-
   const getPercentValue = (): any => {
     return percent ? options.find((option) => option.value === percent) : ''
 }
@@ -48,8 +44,14 @@ const handlePercent = (newValue: any): void => {
   setPercent(newValue.value)
 }
 
-const calculatedTips = () => {
+const calculatedTips = (billStr: string, peopleStr: string, percent: number): any => {
+  const bill = Number(billStr)
+  const people = Number(peopleStr)
+  return bill + ((bill * percent)/ 100) * people
+}
 
+const onButtonClick = (): void => {
+  setTotal(calculatedTips(bill, people, percent))
 }
 
 useEffect(() => {
@@ -60,16 +62,15 @@ useEffect(() => {
   }
   
 })
-
   return (
     <FormContainer>
-      <FormTitle>Welcome to App</FormTitle>
-      <FormDescription>Let’s go calculate your tips</FormDescription>
+      <Title>Welcome to App</Title>
+      <Description>Let’s go calculate your tips</Description>
       <Input placeholder='Enter Bill' type='number' value={bill} onChange={handleBill}/>
       <Input placeholder='Enter people' type='number' value={people} onChange={handlePeople}/>
       <CustomSelect onChange={handlePercent} value={getPercentValue()} options={options}/>
-      <Total>Total: {total}</Total>
-      <Button disabled={button} text='Ohhhoooooo 🍻' type="submit"/>
+      <Total>Total: {total.toFixed(2)}$</Total>
+      <Button disabled={button} text='Ohhhoooooo 🍻' type="submit" onClick={onButtonClick}/>
     </FormContainer>
   )
 }

@@ -20,6 +20,5 @@ export const StyledButton = styled.button`
 
     @media (max-width: 576px) {
         padding: 13px 100px;
-        margin-left: 20px;
     }
 `

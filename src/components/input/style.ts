@@ -18,6 +18,5 @@ export const StyledInput = styled.input`
     
     @media (max-width: 576px) {
         padding: 19px 80px;
-        margin-left: 20px;
     }
 `
