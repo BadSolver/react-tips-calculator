@@ -1,14 +1,19 @@
-import { type } from 'os'
-import React from 'react'
-import { StyledInput } from './style';
+import { StyledInput } from "./style";
 
-interface IInput {
+interface IProps {
   placeholder: string;
   type: string;
+  value: string;
+  onChange: (value: string) => void;
 }
 
-export const Input = ({placeholder, type}: IInput) => {
+export const Input = ({ placeholder, type, value, onChange }: IProps) => {
   return (
-    <StyledInput placeholder={placeholder} type={type}/>
-  )
-}
+    <StyledInput
+      placeholder={placeholder}
+      type={type}
+      value={value}
+      onChange={({ target }) => onChange(target.value)}
+    />
+  );
+};
