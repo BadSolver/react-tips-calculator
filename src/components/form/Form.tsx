@@ -1,24 +1,10 @@
 import { useEffect, useState } from "react";
-import { IOption } from "../../types";
 import { Button } from "../button/Button";
-import { CustomSelect } from "../customSelect/CustomSelect";
+import { CustomSelect, options } from "../customSelect/CustomSelect";
 import { Input } from "../input/Input";
 import { FormContainer, Total, Title, Description } from "./style";
 
-const options: IOption[] = [
-  {
-    value: 10,
-    label: "10%",
-  },
-  {
-    value: 15,
-    label: "15%",
-  },
-  {
-    value: 20,
-    label: "20%",
-  },
-];
+
 
 export const Form = () => {
   const [percent, setPercent] = useState(10);
@@ -83,7 +69,6 @@ export const Form = () => {
       <CustomSelect
         onChange={handlePercent}
         value={getPercentValue()}
-        options={options}
       />
       <Total>Total: {total.toFixed(2)}$</Total>
       <Button

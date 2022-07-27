@@ -1,14 +1,28 @@
 import Select from "react-select";
-import { IOption } from "../../types";
+import { ITipsOption } from "../../types";
 import { customStyles } from "./style";
 
 interface ICustomSelect {
   onChange: (newValue: any) => void;
-  value: IOption | undefined | "";
-  options: IOption[];
+  value: ITipsOption | undefined | "";
 }
 
-export const CustomSelect = ({ onChange, value, options }: ICustomSelect) => {
+export const options: ITipsOption[] = [
+  {
+    value: 10,
+    label: "10%",
+  },
+  {
+    value: 15,
+    label: "15%",
+  },
+  {
+    value: 20,
+    label: "20%",
+  },
+];
+
+export const CustomSelect = ({ onChange, value}: ICustomSelect) => {
   return (
     <Select
       onChange={onChange}
