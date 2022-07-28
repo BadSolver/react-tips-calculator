@@ -15,7 +15,6 @@ export const StyledInput = styled.input`
     -webkit-appearance: none;
     margin: 0;
   }
-
   @media (max-width: 576px) {
     padding: 19px 80px;
   }
