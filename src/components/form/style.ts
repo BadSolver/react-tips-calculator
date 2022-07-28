@@ -1,33 +1,36 @@
 import styled from "styled-components";
 
-export const FormContainer = styled.div`
+export const StyledForm = styled.form`
   max-width: 453px;
   @media (max-width: 576px) {
     max-width: 380px;
   }
 `;
 export const Title = styled.h1`
+  margin-top: 200px;
   font-weight: 400;
-  text-align: center;
   font-size: 40px;
   line-height: 58px;
-  margin-top: 203px;
-`;
-export const Description = styled.p`
-  font-size: 32px;
-  line-height: 37.5px;
   text-align: center;
-  color: #756c6c;
-  opacity: 57%;
+  letter-spacing: -0.3px;
+`;
+export const Subtitle = styled.p`
   margin-top: 45px;
+  font-weight: 400;
+  font-size: 32px;
+  line-height: 38px;
+  text-align: center;
+  letter-spacing: -0.3px;
+  color: rgba(117, 108, 108, 0.57);
 `;
 export const Total = styled.h2`
-  text-align: left;
+  margin-top: 45px;
+  font-weight: 500;
   font-size: 24px;
   line-height: 35px;
   letter-spacing: -0.3px;
-  font-weight: 700;
-  margin-top: 45px;
+  text-align: left;
+  color: #000000;
   @media (max-width: 576px) {
     margin-left: 10px;
   }

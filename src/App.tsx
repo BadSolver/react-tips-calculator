@@ -1,10 +1,12 @@
 import { Form } from "./components/form/Form";
-import { Wrapper } from "./components/ui/style";
+import { StyledWrapper } from "./ui/style";
 
-export const App = () => {
+function App() {
   return (
-    <Wrapper>
+    <StyledWrapper>
       <Form />
-    </Wrapper>
+    </StyledWrapper>
   );
-};
+}
+
+export default App;
