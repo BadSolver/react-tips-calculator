@@ -18,6 +18,6 @@ export const StyledButton = styled.button`
     cursor: default;
   }
   @media (max-width: 576px) {
-    padding: 13px 100px;
+    padding: 13px 115.65px;
   }
 `;
