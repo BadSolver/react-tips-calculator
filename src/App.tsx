@@ -1,4 +1,4 @@
-import { Form } from "./components/form/Form";
+import { Form } from "./Components/form/Form";
 import { StyledWrapper } from "./ui/style";
 
 function App() {
