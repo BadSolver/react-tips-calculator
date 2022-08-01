@@ -2,16 +2,15 @@ import { StyledInput } from "./style";
 
 interface IProps {
   placeholder: string;
-  type: string;
   value: string;
   onChange: (value: string) => void;
 }
 
-export const Input = ({ placeholder, type, value, onChange }: IProps) => {
+export const Input = ({ placeholder, value, onChange }: IProps) => {
   return (
     <StyledInput
       placeholder={placeholder}
-      type={type}
+      type='number'
       value={value}
       onChange={({ target }) => onChange(target.value)}
     />

@@ -3,25 +3,12 @@ import { FormEvent, useEffect, useState } from "react";
 import { SingleValue } from "react-select";
 import { ITipsOption } from "../../types";
 import { Button } from "../button/Button";
-import { CustomSelect } from "../customSelect/CustomSelect";
+import { CustomSelect, options } from "../customSelect/CustomSelect";
 import { Input } from "../input/Input";
 import { StyledForm, Subtitle, Title, Total } from "./style";
 
 export const Form = () => {
-  const options: ITipsOption[] = [
-    {
-      value: 10,
-      label: "10%",
-    },
-    {
-      value: 15,
-      label: "15%",
-    },
-    {
-      value: 20,
-      label: "20%",
-    },
-  ];
+  
 
   const [option] = useState<ITipsOption[]>(options);
   const [button, setButton] = useState(true);
@@ -36,7 +23,7 @@ export const Form = () => {
   const calculatedTips = (billStr: string, peopleStr: string): number => {
     const bill = Number(billStr);
     const people = Number(peopleStr);
-    return ((bill * tips.value) / 100) * people;
+    return (bill + (bill * tips.value) / 100) / people;;
   };
 
   const handleSubmit = (event: FormEvent<HTMLFormElement>): void => {
@@ -62,12 +49,9 @@ export const Form = () => {
     setBill(value);
   };
 
-  useEffect(() => {
-    if (bill && people) {
-      return handleButton(false);
-    }
-    return handleButton(true);
-  });
+  useEffect((): void => {
+    bill && people ? handleButton(false) : handleButton(true)
+  }, [bill, people]);
 
   return (
     <StyledForm onSubmit={handleSubmit}>
@@ -75,13 +59,11 @@ export const Form = () => {
       <Subtitle>Let’s go calculate your tips</Subtitle>
       <Input
         placeholder="Enter bill"
-        type="number"
         value={bill}
         onChange={handleBill}
       />
       <Input
         placeholder="Enter  persons"
-        type="number"
         value={people}
         onChange={handlePeople}
       />

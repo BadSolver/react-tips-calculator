@@ -8,6 +8,20 @@ interface IProps {
   handleSelect: (option: ITipsOption | null) => void;
   options: ITipsOption[];
 }
+export const options: ITipsOption[] = [
+  {
+    value: 10,
+    label: "10%",
+  },
+  {
+    value: 15,
+    label: "15%",
+  },
+  {
+    value: 20,
+    label: "20%",
+  },
+];
 
 export const CustomSelect = ({ tips, handleSelect, options }: IProps) => {
   return (
