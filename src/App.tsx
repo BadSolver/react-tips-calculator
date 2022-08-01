@@ -1,4 +1,3 @@
-import React from "react";
 import { Form } from "./Components/form/Form";
 import { StyledWrapper } from "./ui/style";
 
