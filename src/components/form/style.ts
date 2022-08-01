@@ -1,6 +1,9 @@
 import styled from "styled-components";
 
 export const StyledForm = styled.form`
+  display: flex;
+  flex-direction: column;
+  gap: 33px;
   max-width: 453px;
   @media (max-width: 576px) {
     max-width: 380px;
@@ -15,7 +18,7 @@ export const Title = styled.h1`
   letter-spacing: -0.3px;
 `;
 export const Subtitle = styled.p`
-  margin-top: 45px;
+  margin-top: 12px;
   font-weight: 400;
   font-size: 32px;
   line-height: 38px;
@@ -24,7 +27,7 @@ export const Subtitle = styled.p`
   color: rgba(117, 108, 108, 0.57);
 `;
 export const Total = styled.h2`
-  margin-top: 45px;
+  margin-top: 12px;
   font-weight: 500;
   font-size: 24px;
   line-height: 35px;

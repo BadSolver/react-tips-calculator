@@ -1,6 +1,7 @@
 import Select from "react-select";
 import { customStyles } from "./style";
 import { ITipsOption } from "../../types";
+import React from "react";
 
 interface IProps {
   tips: ITipsOption;

@@ -1,3 +1,4 @@
+import React from "react";
 import { FormEvent, useEffect, useState } from "react";
 import { SingleValue } from "react-select";
 import { ITipsOption } from "../../types";

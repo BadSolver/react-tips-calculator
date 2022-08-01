@@ -4,7 +4,6 @@ import { ITipsOption } from "../../types";
 export const customStyles: StylesConfig<ITipsOption> = {
   control: (styles) => ({
     ...styles,
-    marginTop: "30px",
     textAlign: "center",
     color: "#756C6C",
     borderRadius: "30px",
